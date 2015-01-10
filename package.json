@@ -1,0 +1,23 @@
+{
+  "name": "nodebb-plugin-spoiler",
+  "version": "0.0.1",
+  "description": "This plugin allows users to use the [spoiler][/spoiler] tag",
+  "main": "library.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rbbau/nodebb-plugin-spoiler"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "spoiler",
+    "shell"
+  ],
+  "author": {
+    "name": "Rubén Ballester",
+    "email": "irbbau@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/rbbau/nodebb-plugin-spoiler/issues"
+  }
+}

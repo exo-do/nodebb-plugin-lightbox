@@ -1,0 +1,19 @@
+{
+	"id": "nodebb-plugin-spoiler",
+	"name": "Spoiler Tag Parser",
+	"description": "This plugin allows users to use the [spoiler][/spoiler] tag ",
+	"url": "https://github.com/rbbau/nodebb-plugin-spoiler",
+	"library": "./library.js",
+
+	"hooks": [
+		{
+			"hook": "filter:parse.post", "method": "spoilerPrettify", "callbacked": true
+		}
+	],
+	"scripts": [
+		"resources/js/spoiler.js"
+	],
+	"less": [
+		"resources/style.less"
+	]
+}
