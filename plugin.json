@@ -6,9 +6,9 @@
 	"library": "./library.js",
 
 	"hooks": [
-		{
-			"hook": "filter:parse.post", "method": "spoilerPrettify", "callbacked": true
-		}
+		{ "hook": "filter:parse.post", "method": "spoilerPrettify", "callbacked": true, "priority": 6 },
+		{ "hook": "filter:parse.signature", "method": "parseSignature","priority": 6},
+		{ "hook": "filter:composer.help", "method": "renderHelp", "priority": 6 }
 	],
 	"scripts": [
 		"resources/js/spoiler.js"

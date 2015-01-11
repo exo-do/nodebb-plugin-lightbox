@@ -2,11 +2,11 @@
 
 Este plugin otorga la funcionalidad de añadir botones de spoiler en los mensajes del foro
 
-Para ello hace uso de las etiquetas >! y <!
+Para ello hace uso de las etiquetas /spoiler y spoiler/
 
 Es decir, sustituye:
 
-    >!Esto es una prueba!<
+    /spoiler Esto es una prueba spoiler/
 
 Por un spoiler cuyo contenido es Esto es una prueba
 
@@ -28,4 +28,4 @@ Compatible con la API
 
 ## Problemas conocidos y características pendientes
 
-No reconoce saltos de línea
+Ninguno
