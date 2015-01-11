@@ -3,11 +3,11 @@
 var spoiler = {};
 
   spoiler.spoilerPrettify = function (postContent, callback) {
-    postContent.postData.content = postContent.postData.content.replace( /\/spoiler.?([\s\S]*)spoiler\//g , '<div class="spoiler"><div class="spoiler-btn"><span class="spoilervariable">Spoiler</span></div><div class="spoiler-body collapse">$1</div></div>');
+    postContent.postData.content = postContent.postData.content.replace( /\/spoiler?([\S\s]*?)spoiler\//g , '<div class="spoiler"><div class="spoiler-btn"><span class="spoilervariable">Spoiler</span></div><div class="spoiler-body collapse">$1</div></div>');
     callback(null, postContent);
   };
   spoiler.parseSignature = function (postContent, callback) {
-    postContent.userData.signature = postContent.userData.signature.replace( /\/spoiler.?([\s\S]*)spoiler\//g , '<div class="spoiler"><div class="spoiler-btn"><span class="spoilervariable">Spoiler</span></div><div class="spoiler-body collapse">$1</div></div>');
+    postContent.userData.signature = postContent.userData.signature.replace( /\/spoiler?([\S\s]*?)spoiler\//g , '<div class="spoiler"><div class="spoiler-btn"><span class="spoilervariable">Spoiler</span></div><div class="spoiler-body collapse">$1</div></div>');
     callback(null, postContent);
   };
   spoiler.renderHelp = function (helpContent, callback) {
