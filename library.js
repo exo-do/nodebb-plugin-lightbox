@@ -4,12 +4,12 @@ var spoiler = {};
 
   spoiler.spoilerPrettify = function (postContent, callback) {
     postContent.postData.content = postContent.postData.content.replace( /\/spoiler?([\S\s]*?)spoiler\//g , '<div class="spoiler"><div class="spoiler-btn"><span class="spoilervariable">Spoiler</span></div><div class="spoiler-body collapse">$1</div></div>');
-    postContent.postData.content = postContent.postData.content.replace( /<code>?([\S\s]*?)<div class="spoiler"><div class="spoiler-btn"><span class="spoilervariable">Spoiler<\/span><\/div><div class="spoiler-body collapse">?([\S\s]*?)<\/div><\/div>?([\S\s]*?)<\/code>/g , '$1/spoiler  $2 spoiler/$3');
+    postContent.postData.content = postContent.postData.content.replace( /<code>?([\S\s]*?)<div class="spoiler"><div class="spoiler-btn"><span class="spoilervariable">Spoiler<\/span><\/div><div class="spoiler-body collapse">?([\S\s]*?)<\/div><\/div>?([\S\s]*?)<\/code>/g , '<code>$1/spoiler  $2 spoiler/$3</code>');
     callback(null, postContent);
   };
   spoiler.parseSignature = function (postContent, callback) {
     postContent.userData.signature = postContent.userData.signature.replace( /\/spoiler?([\S\s]*?)spoiler\//g , '<div class="spoiler"><div class="spoiler-btn"><span class="spoilervariable">Spoiler</span></div><div class="spoiler-body collapse">$1</div></div>');
-    postContent.userData.signature = postContent.userData.signature.replace( /<code>?([\S\s]*?)<div class="spoiler"><div class="spoiler-btn"><span class="spoilervariable">Spoiler<\/span><\/div><div class="spoiler-body collapse">?([\S\s]*?)<\/div><\/div>?([\S\s]*?)<\/code>/g , '$1/spoiler  $2 spoiler/$3');
+    postContent.userData.signature = postContent.userData.signature.replace( /<code>?([\S\s]*?)<div class="spoiler"><div class="spoiler-btn"><span class="spoilervariable">Spoiler<\/span><\/div><div class="spoiler-body collapse">?([\S\s]*?)<\/div><\/div>?([\S\s]*?)<\/code>/g , '<code>$1/spoiler  $2 spoiler/$3</code>');
     callback(null, postContent);
   };
   spoiler.renderHelp = function (helpContent, callback) {
